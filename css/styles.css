@@ -18,7 +18,27 @@ body {
 }
 
 .list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul{
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #ECECEC;
 }
 
 /* форматування логотипу (в навігації слово поділене на дві частини і у утері також) */
@@ -46,7 +66,20 @@ body {
 /* кінець форматування логотипу */
 
 /* форматування навігації */
+.site-nav{
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     font-size: 14px;
     text-decoration: none;
@@ -58,6 +91,15 @@ body {
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accent-color);
+}
+
+.contacts{
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts .item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .contacts a {
@@ -75,17 +117,19 @@ body {
 /* hero */
 .hero {
     background: var(--secondary-bg-color);
+    text-align: center;
 }
 .hero-title {
+    margin-top: 0px;
+    margin-bottom: 40px;
+
     font-weight: 900;
     font-size: 44px;    
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-bg-color);
 }
-
 
 /* button */
 .button {
@@ -93,9 +137,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    min-width: 216px;
     letter-spacing: 0.06em;
 
     border-radius: 4px;
@@ -104,22 +146,22 @@ body {
 }
 
 .hero-button {
+    min-width: 200px;
+    min-height: 50px;
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
 }
 
-.filter-button {
-    color: var(--primary-text-color);
-    background-color: var(--filter-bg-color);
-}
 
-.filter-button:hover,
-.filter-button:focus {
-    color: var(--primary-bg-color);
-    background-color: var(--accent-color);
+.features-list{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .features-list .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     text-decoration: none;
@@ -130,18 +172,41 @@ body {
     color: var(--primary-text-color);
 }
 
+.features-list .item{
+    width: calc((100% - 90px) / 4);
+    /* background-color: teal; */
+    margin-right: 30px;
+}
+
+.features-list .item:nth-child(4n){
+    margin-right: 0px;
+}
+
+/* Якщо буде більше ніж 1 ряд по 4шт то розкоментувати код нижче */
+/* .features-list .item:nth-last-child(-n + 4){
+    margin-bottom: 0px;
+} */
+
 .features-list .text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
     font-size: 14px;
     text-decoration: none;
-
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
 /* section */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .section-title {
+    margin-top: 0px;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     
@@ -151,8 +216,22 @@ body {
     color: var(--primary-text-color);
 }
 
-.our-team {
-    background: #F5F4FA;
+.work-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.members{
+    background-color: var(--filter-bg-color);
+}
+.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.members-list .item{
+    width: 270px;
+    margin: 15px;
 }
 
 .teammate-name {
@@ -173,10 +252,20 @@ body {
 }
 
 .site-footer {
+    /* width: 1600px;
+    margin: 0 auto; */
+
     background: var(--secondary-bg-color);
 }
 
+.footer-logo{
+    /* padding-left: 215px; */
+    padding-top: 60px;
+    margin-bottom: 28px;
+}
+
 .footer-geolocation  {
+    padding-left: 215;
     font-size: 14px;
     line-height: 1.7;
     text-decoration: none;
@@ -204,6 +293,47 @@ body {
 }
 
 /* site-page potfolio */
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 34px;
+}
+
+.filter {
+    display: flex;
+}
+
+.filter-button {
+    min-width: 67px;
+
+    color: var(--primary-text-color);
+    background-color: var(--filter-bg-color);
+}
+
+.filter > .item:not(:first-child) {
+    margin-left: 8px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.portfolio a {
+    text-decoration: none;
+}
+
+.portfolio > .item{
+    width: 370px;
+    margin: 15px;
+}
 
 .portfolio-example {
     font-weight: 700;
@@ -220,6 +350,10 @@ body {
 
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+}
+
+.example-description{
+    margin-top: 20px;
 }
 
 img {
