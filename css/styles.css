@@ -17,6 +17,14 @@ body {
     letter-spacing: 0.02em;
 }
 
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+nav {
+    margin-left: 93px;
+}
+
 .list {
     margin: 0;
     padding: 0;
@@ -37,8 +45,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 .main-nav {
     display: flex;
     align-items: center;
-
-    border-bottom: 1px solid #ECECEC;
+    justify-content: center;
 }
 
 /* форматування логотипу (в навігації слово поділене на дві частини і у утері також) */
@@ -68,7 +75,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
 /* форматування навігації */
 .site-nav{
     display: flex;
-    margin-left: 93px;
 }
 
 .site-nav .item:not(:last-child){
@@ -120,8 +126,12 @@ h1,h2,h3,h4,h5,h6,p,ul{
     text-align: center;
 }
 .hero-title {
-    margin-top: 0px;
+    padding-top: 200px;
+    padding-bottom: 30px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 696px;
 
     font-weight: 900;
     font-size: 44px;    
@@ -146,12 +156,12 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .hero-button {
+    margin-bottom: 200px;
     min-width: 200px;
     min-height: 50px;
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
 }
-
 
 .features-list{
     display: flex;
@@ -174,18 +184,12 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 .features-list .item{
     width: calc((100% - 90px) / 4);
-    /* background-color: teal; */
     margin-right: 30px;
 }
 
 .features-list .item:nth-child(4n){
     margin-right: 0px;
 }
-
-/* Якщо буде більше ніж 1 ряд по 4шт то розкоментувати код нижче */
-/* .features-list .item:nth-last-child(-n + 4){
-    margin-bottom: 0px;
-} */
 
 .features-list .text {
     margin-top: 0px;
@@ -204,6 +208,10 @@ h1,h2,h3,h4,h5,h6,p,ul{
     padding-bottom: 94px;
 }
 
+.section:nth-child(3){
+    padding-top: 0px;
+}
+
 .section-title {
     margin-top: 0px;
     margin-bottom: 50px;
@@ -218,12 +226,15 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 .work-list{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 370px;
+    gap: 30px 30px;
 }
 
 .members{
     background-color: var(--filter-bg-color);
 }
+
 .members-list {
     display: flex;
     flex-wrap: wrap;
@@ -234,7 +245,13 @@ h1,h2,h3,h4,h5,h6,p,ul{
     margin: 15px;
 }
 
+.teammate-description{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
 .teammate-name {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -252,16 +269,21 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .site-footer {
-    /* width: 1600px;
-    margin: 0 auto; */
-
+    padding-top: 60px;
     background: var(--secondary-bg-color);
 }
 
-.footer-logo{
-    /* padding-left: 215px; */
-    padding-top: 60px;
+.logo-footer {
     margin-bottom: 28px;
+}
+
+.link-contact {
+    margin-bottom: 12px;
+}
+
+.link-contact:last-child {
+    padding-bottom: 60px;
+    margin-bottom: 0;
 }
 
 .footer-geolocation  {
@@ -293,19 +315,16 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 /* site-page potfolio */
-.filter-buttons {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 34px;
-}
 
 .filter {
     display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .filter-button {
     min-width: 67px;
-
+    padding: 6px 22px;
     color: var(--primary-text-color);
     background-color: var(--filter-bg-color);
 }
@@ -336,6 +355,8 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .portfolio-example {
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2.0;
@@ -353,7 +374,10 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .example-description{
-    margin-top: 20px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--filter-bg-color);
+    border-left: 1px solid var(--filter-bg-color);
+    border-right: 1px solid var(--filter-bg-color);
 }
 
 img {
