@@ -50,6 +50,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 /* форматування логотипу (в навігації слово поділене на дві частини і у утері також) */
 .logo {
+        display: block;
     font-family: 'Raleway';
     font-size: 26px;
     font-weight: 700;
@@ -122,11 +123,11 @@ h1,h2,h3,h4,h5,h6,p,ul{
 
 /* hero */
 .hero {
+    padding: 200px 0px;
     background: var(--secondary-bg-color);
     text-align: center;
 }
 .hero-title {
-    padding-top: 200px;
     padding-bottom: 30px;
     margin-bottom: 40px;
     margin-left: auto;
@@ -156,7 +157,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
 }
 
 .hero-button {
-    margin-bottom: 200px;
     min-width: 200px;
     min-height: 50px;
     color: var(--primary-bg-color);
@@ -241,7 +241,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
     margin: -15px;
 }
 .members-list .item{
-    width: 270px;
+    width: 260px;
     margin: 15px;
 }
 
@@ -268,12 +268,15 @@ h1,h2,h3,h4,h5,h6,p,ul{
     color: var(--secondary-text-color);
 }
 
-.site-footer {
+footer {
+    display: block;
     padding-top: 60px;
+    padding-bottom: 60px;
     background: var(--secondary-bg-color);
 }
 
-.logo-footer {
+footer a:first-child{
+
     margin-bottom: 28px;
 }
 
@@ -281,10 +284,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
     margin-bottom: 12px;
 }
 
-.link-contact:last-child {
-    padding-bottom: 60px;
-    margin-bottom: 0;
-}
 
 .footer-geolocation  {
     padding-left: 215;
