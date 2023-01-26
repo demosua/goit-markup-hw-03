@@ -128,7 +128,6 @@ h1,h2,h3,h4,h5,h6,p,ul{
     text-align: center;
 }
 .hero-title {
-    padding-bottom: 30px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -228,7 +227,7 @@ h1,h2,h3,h4,h5,h6,p,ul{
     display: flex;
     flex-wrap: wrap;
     min-width: 370px;
-    gap: 30px 30px;
+    gap: 30px;
 }
 
 .members{
@@ -240,9 +239,16 @@ h1,h2,h3,h4,h5,h6,p,ul{
     flex-wrap: wrap;
     margin: -15px;
 }
+
 .members-list .item{
-    width: 260px;
+    width: 270px;
     margin: 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .teammate-description{
@@ -276,14 +282,8 @@ footer {
 }
 
 footer a:first-child{
-
     margin-bottom: 28px;
 }
-
-.link-contact {
-    margin-bottom: 12px;
-}
-
 
 .footer-geolocation  {
     padding-left: 215;
@@ -379,11 +379,6 @@ footer a:first-child{
     border-right: 1px solid var(--filter-bg-color);
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
 
 .visually-hidden {
     position: absolute;
