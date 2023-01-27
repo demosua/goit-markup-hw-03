@@ -309,6 +309,12 @@ footer a:first-child{
 .footer-contacts:focus {
     color: var(--accent-color);
 }
+
+.link-contact {
+    margin-bottom: 12px;
+}
+
+
 .site-nav .current {
     color: var(--accent-color);
 }
